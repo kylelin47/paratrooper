@@ -3,13 +3,29 @@ using System.Collections;
 
 public class AttachToPlayer : MonoBehaviour {
 	private GameObject player;
+	private ManAnimation ma;
+	private bool playerVisible;
 	// Use this for initialization
 	void Start () {
+		playerVisible = true;
 		player = GameObject.FindWithTag ("Player");
+		ma = (ManAnimation) FindObjectOfType(typeof(ManAnimation));
 	}
-	
+	private void setPlayer(bool visible) {
+		if (playerVisible != visible) {
+			ma.SetRenderEnable (visible);
+			playerVisible = visible;
+		}
+	}
 	// Update is called once per frame
 	void Update () {
-		transform.position = player.transform.position;
+		if (ma.animationState == "beginSpread" || ma.animationState == "beginStand") {
+			transform.parent = player.transform;
+			setPlayer (false);
+		} else {
+			transform.parent = null;
+			transform.position = player.transform.position;
+			setPlayer (true);
+		}
 	}
 }

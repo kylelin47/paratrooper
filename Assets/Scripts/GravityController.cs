@@ -4,8 +4,8 @@ using System.Collections;
 public class GravityController : MonoBehaviour {
 	private Rigidbody rbody;
 	private GameController gc;
-	private bool parachuteActive;
 	private GameObject parachute;
+	public float maximumDrag;
 
 	public float parachuteHeight;
 	// Use this for initialization
@@ -14,18 +14,19 @@ public class GravityController : MonoBehaviour {
 		gc = (GameController) FindObjectOfType(typeof(GameController));
 		parachute = GameObject.FindWithTag ("Parachute");
 		parachute.SetActive (false);
-		parachuteActive = false;
+		gc.parachuteActive = false;
 	}
 
 	// Update is called once per frame
 	void Update () {
+		gc.playerVelocity = rbody.velocity.magnitude;
 		// at the right height, hit the key
-		if (!parachuteActive && gc.GetInteractionKey () && transform.position.y < parachuteHeight) {
-			parachuteActive = true;
+		if (!gc.parachuteActive && gc.GetInteractionKey () && transform.position.y < parachuteHeight) {
+			gc.parachuteActive  = true;
 			parachute.SetActive (true);
 		}
-		if (parachuteActive) {
-			if (rbody.drag < 20) {
+		if (gc.parachuteActive) {
+			if (rbody.drag < maximumDrag) {
 				rbody.drag += (Time.deltaTime * 4);
 			}
 		}
@@ -34,9 +35,5 @@ public class GravityController : MonoBehaviour {
 			rbody.velocity = Vector3.zero;
 			// rbody.useGravity = false;
 		}
-	}
-
-	private void DeployParachute() {
-
 	}
 }
