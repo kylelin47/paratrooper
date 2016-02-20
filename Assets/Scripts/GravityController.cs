@@ -27,7 +27,7 @@ public class GravityController : MonoBehaviour {
 		}
 		if (gc.parachuteActive) {
 			if (rbody.drag < maximumDrag) {
-				rbody.drag += (Time.deltaTime * 4);
+				rbody.drag += (Time.deltaTime * maximumDrag/5);
 			}
 		}
 		// hit the water
