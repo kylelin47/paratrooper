@@ -4,6 +4,7 @@ using System.Collections;
 public class GameController : MonoBehaviour {
 	public bool parachuteActive;
 	public float playerVelocity;
+	public float playerAltitude;
 	public bool playerActive;
 	CardboardAudioSource wind;
 	void Start () {

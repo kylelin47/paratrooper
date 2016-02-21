@@ -20,6 +20,7 @@ public class GravityController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		gc.playerAltitude = rbody.transform.position.y;
 		if (gc.playerActive) {
 			gc.playerVelocity = rbody.velocity.magnitude;
 			// at the right height, hit the key

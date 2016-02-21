@@ -17,7 +17,6 @@ public class AttachToPlayer : MonoBehaviour {
 			playerVisible = visible;
 		}
 	}
-	// Update is called once per frame
 	void LateUpdate () {
 		if (ma.animationState == "beginSpread" || ma.animationState == "beginStand") {
 			transform.parent = player.transform;
