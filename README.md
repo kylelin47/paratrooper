@@ -1,7 +1,10 @@
 # paratrooper
 ## Motivation and Explanation
-Our goal was to center our learning around a memorable experience. We wanted the experience to have unique and recognizable sound,
-and a dynamic environment. We felt that sky diving satisfied these requirements.
+Our goal was to center our learning around a memorable experience. We wanted the experience to have unique sound
+and a dynamic environment, so that it would be easily recognizable. We felt that sky diving satisfied these requirements. The visual
+of falling through the clouds, and seeing the ground from so high that its features appear flat should evoke strong reaction and
+imagination from the user. The sound of the wind rushing by quickly in free-fall contrasted with the relative calm of the parachute
+flapping in the breeze should do the same. We decided we would teach about the basic knowledge required in order to safely sky dive.
 
 We then decided to choose the location of the sky dive to be the [Great Blue Hole](https://en.wikipedia.org/wiki/Great_Blue_Hole).
 From the start, we knew the location of the sky dive had to be a recognizable location, because sky diving into a generic environment
@@ -21,6 +24,8 @@ the sky dive.
 - Gravity was simulated using a RigidBody on the player
 - Movement occurred by applying forces to the RigidBody
 - The effect of a parachute was simulated by applying drag to the RigidBody
+- Clouds are generated programatically
+- Stereo overlays created by having a Canvas in the world space follow the camera
 
 ## Non-Student Created Assets
 ### Audio
