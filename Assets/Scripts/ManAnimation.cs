@@ -10,13 +10,15 @@ public class ManAnimation : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator> (); 
-		anim.SetBool ("jump", true);
 		gc = (GameController) FindObjectOfType(typeof(GameController));
 		rends = gameObject.GetComponentsInChildren<MeshRenderer>();
 	}
 
 	// Update is called once per frame
 	void Update () {
+		if (gc.playerActive) {
+			anim.SetBool ("jump", true);
+		}
 		if (gc.parachuteActive) {
 			anim.SetTrigger ("parachute");
 		}
