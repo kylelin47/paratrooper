@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: bcbcc76825eeb2447a7751b73c40214c
-timeCreated: 1456134946
+guid: 6db84fe6f7268854884355bee4fad902
+timeCreated: 1456206256
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -21,10 +21,12 @@ ModelImporter:
     2300002: Fuselage_MeshPart0
     2300004: Fuselage_MeshPart1
     2300006: Propeller
+    2300008: //RootNode
     3300000: Door
     3300002: Fuselage_MeshPart0
     3300004: Fuselage_MeshPart1
     3300006: Propeller
+    3300008: //RootNode
     4300000: Propeller
     4300002: Door
     4300004: Fuselage_MeshPart0
