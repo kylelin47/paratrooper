@@ -19,6 +19,30 @@ A voice in the user's ear gives some introductory information, with sound effect
 the door to the plane opens and the user jumps out of the plane. On the way down, the user is given instructions on how to safely complete
 the sky dive.
 
+### Learning Objective
+After the VR experience, users will be able to demonstrate understanding of the key steps needed in order to sky dive.
+
+### Increasing Sense of Presence
+- Audio
+    - All spatialized to seem to occur from proper location
+    - Wind sounds that increase depending on velocity
+    - Sounds of parachute opening, flapping in the wind, plane leaving
+    - Instructions and learning information integrated into the world as a voice in an earpiece
+- Visual
+    - Avatar present
+    - Volumetric clouds present at correct altitudes
+    - Camera turns to match head position that a sky diver would have
+    - Body rotates to positions that a sky diver would have
+    - Graphics cover the entire range of experience
+- Misc
+    - Speeds and timings roughly scaled to reality
+    - Single, easy to understand and follow story line with a strong central theme
+    - Small beginning environment to acquaint users with looking around in VR before main experience begins
+
+### Environment Design
+Identify how environment design leveraged concepts found in the VR Book sections 21.1-21.5 in your experience
+
+## Education Results
 ## The Experience
 ## Technical Explanation
 - Gravity was simulated using a RigidBody on the player
@@ -26,6 +50,9 @@ the sky dive.
 - The effect of a parachute was simulated by applying drag to the RigidBody
 - Clouds are generated programatically
 - Stereo overlays created by having a Canvas in the world space follow the camera
+- Camera attached to the head of the avatar
+- Avatar rotates to follow the camera
+- Transitions (standing --> spread eagle --> parachuting) made using Unity Animator
 
 ## Non-Student Created Assets
 ### Audio

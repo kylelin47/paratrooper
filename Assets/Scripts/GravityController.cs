@@ -9,6 +9,7 @@ public class GravityController : MonoBehaviour {
 	public float horizontalSpeed = 10;
 	public float maximumDrag;
 	public float parachuteHeight;
+	public float gravityScale;
 	// Use this for initialization
 	void Start () {
 		rbody = GetComponent<Rigidbody> ();
@@ -16,6 +17,7 @@ public class GravityController : MonoBehaviour {
 		parachute = GameObject.FindWithTag ("Parachute");
 		parachute.SetActive (false);
 		gc.parachuteActive = false;
+		Physics.gravity = new Vector3(0, -9.81f * gravityScale, 0);
 	}
 
 	// Update is called once per frame
@@ -25,8 +27,7 @@ public class GravityController : MonoBehaviour {
 			gc.playerVelocity = rbody.velocity.magnitude;
 			// at the right height, hit the key
 			if (!gc.parachuteActive && gc.GetInteractionKey () && transform.position.y < parachuteHeight) {
-				gc.parachuteActive = true;
-				parachute.SetActive (true);
+				activateParachute ();
 			}
 			if (gc.parachuteActive) {
 				if (rbody.drag < maximumDrag) {
@@ -35,7 +36,11 @@ public class GravityController : MonoBehaviour {
 			}
 		}
 	}
-
+	private void activateParachute() {
+		gc.parachuteActive = true;
+		parachute.SetActive (true);
+		Physics.gravity = new Vector3(0, -9.81f, 0);
+	}
 	void FixedUpdate() {
 		if (gc.playerActive) {
 			rbody.AddForce (Camera.main.transform.right * horizontalSpeed * Input.GetAxis ("Horizontal"));
