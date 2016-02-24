@@ -15,7 +15,7 @@ public class DoorAnimation : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (gc.OpenDoorKey ()) {
+		if (gc.GetInteractionKey () && door.transform.eulerAngles.y == 0) {
 			anim.enabled = true;
 		}
 	}
