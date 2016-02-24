@@ -24,7 +24,7 @@ public class JumpAnimation : MonoBehaviour {
 		if (gc.GetInteractionKey () && door.transform.eulerAngles.y == 270) {
 			anim.enabled = true;
 		}
-		if (player.transform.position.y < 1495) {
+		if (player.transform.position.y < 2195) {
 			anim.enabled = false;
 			gc.playerActive = true;
 			plane.transform.Translate (Vector3.right * 50 * Time.deltaTime);
