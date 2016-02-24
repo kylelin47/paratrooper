@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class JumpAnimation : MonoBehaviour {
-	
+	private float originalY;
 	private Animator anim;
 	private GameController gc;
 	private GameObject player;
@@ -17,6 +17,7 @@ public class JumpAnimation : MonoBehaviour {
 		door = GameObject.FindWithTag ("Door");
 		plane = GameObject.FindWithTag ("Plane");
 		anim.enabled = false;
+		originalY = transform.position.y;
 	}
 
 	// Update is called once per frame
@@ -24,7 +25,7 @@ public class JumpAnimation : MonoBehaviour {
 		if (gc.GetInteractionKey () && door.transform.eulerAngles.y == 270) {
 			anim.enabled = true;
 		}
-		if (player.transform.position.y < 2195) {
+		if (player.transform.position.y < originalY - 5) {
 			anim.enabled = false;
 			gc.playerActive = true;
 			plane.transform.Translate (Vector3.right * 50 * Time.deltaTime);

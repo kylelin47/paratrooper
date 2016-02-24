@@ -14,7 +14,9 @@ public class AltitudeDisplay : MonoBehaviour {
 	}
 	private IEnumerator Altimeter() {
 		while (true) {
-			altitude.text = "Altitude: " + (gc.playerAltitude * 3.28).ToString ("F");
+			if (gc.playerActive) {
+				altitude.text = "Altitude: " + (gc.playerAltitude * 3.28).ToString ("F");
+			}
 			yield return new WaitForSeconds (0.5f);
 		}
 	}
