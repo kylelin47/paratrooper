@@ -20,13 +20,12 @@ public class JumpAnimation : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (gc.SkydiveKey () && door.transform.eulerAngles.y == 270) {
-			anim.SetBool ("jump", true);
-			//anim.StopPlayback();
-			//gc.playerActive = true;
+			anim.enabled = true;
+		}
+		if (player.transform.position.y < 1495) {
+			anim.enabled = false;
+			gc.playerActive = true;
 		}
 	}
 
-	void FixedUpdate() {
-		//gc.playerActive = true;
-	}
 }

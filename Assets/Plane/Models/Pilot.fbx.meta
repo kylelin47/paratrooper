@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: fc5dcb644dba4b64f8ec9fb05005c664
-timeCreated: 1456211111
+guid: 80f8a60d2dbb2714b8c193ce32620465
+timeCreated: 1456304759
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -222,15 +222,15 @@ ModelImporter:
       name: SittingThumbsUp
       takeName: mixamo.com
       firstFrame: 0
-      lastFrame: 115
+      lastFrame: 103
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
+      loopTime: 1
+      loopBlend: 1
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0

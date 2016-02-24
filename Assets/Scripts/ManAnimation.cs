@@ -7,22 +7,16 @@ public class ManAnimation : MonoBehaviour {
 	private MeshRenderer[] rends;
 	private MeshRenderer parachuteRenderer = null;
 	public string animationState;
-	private GameObject door;
-
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator> (); 
 		gc = (GameController) FindObjectOfType(typeof(GameController));
 		rends = gameObject.GetComponentsInChildren<MeshRenderer>();
-		door = GameObject.FindWithTag ("Door");
 	}
 
 	// Update is called once per frame
 	void Update () {
-		//if (gc.playerActive) {
-		//	anim.SetBool ("jump", true);
-		//}
-		if (gc.SkydiveKey () && door.transform.eulerAngles.y == 270) {
+		if (gc.playerActive) {
 			anim.SetBool ("jump", true);
 		}
 		if (gc.parachuteActive) {
