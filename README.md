@@ -9,7 +9,7 @@ flapping in the breeze should do the same. We decided we would teach about the b
 We then decided to choose the location of the sky dive to be the [Great Blue Hole](https://en.wikipedia.org/wiki/Great_Blue_Hole).
 From the start, we knew the location of the sky dive had to be a recognizable location, because sky diving into a generic environment
 isn't as interesting. We decided on the Great Blue Hole in particular because of its size and how it's recognizable even from high
-in the air. 
+in the air.
 
 At the end of the experience, we wanted our user to have a greater understanding of the steps taken in sky diving, along with some insight
 into the mechanics of skydiving (for example, time spent in free fall, height to dive from, how sound changes when parachute deploys).
@@ -72,6 +72,8 @@ After the VR experience, users will be able to demonstrate understanding of the 
 | --- | --- | --- |
 | CloudsToy | joycf | http://www.jocyf.com/utilsEnglih.html |
 | Parachutes | 3D Everything | https://www.assetstore.unity3d.com/en/#!/content/40565 |
+| Underwater world and effects | Konstantin Dvornik | http://kostiantyn-dvornik.blogspot.com/2013/05/unity-worlds-coolest-tutorial-about.html |
+| Fishing Boat | Ozgur Saral | https://www.assetstore.unity3d.com/en/#!/content/23181 | 
 ## Team Members
 - Kyle Lin
 - Virada Long
