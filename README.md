@@ -74,6 +74,9 @@ After the VR experience, users will be able to demonstrate understanding of the 
 | Parachutes | 3D Everything | https://www.assetstore.unity3d.com/en/#!/content/40565 |
 | Underwater world and effects | Konstantin Dvornik | http://kostiantyn-dvornik.blogspot.com/2013/05/unity-worlds-coolest-tutorial-about.html |
 | Fishing Boat | Ozgur Saral | https://www.assetstore.unity3d.com/en/#!/content/23181 | 
+| Cessna 172 Plane | 3dregenerator | http://tf3dm.com/3d-models/maya | 
+| Pilot | AutoDesk Character Generator | https://charactergenerator.autodesk.com/account/MyAvatars.aspx | 
+| Thumbs Up | Mixamo | https://www.mixamo.com/ |
 ## Team Members
 - Kyle Lin
 - Virada Long
