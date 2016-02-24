@@ -40,7 +40,14 @@ After the VR experience, users will be able to demonstrate understanding of the 
     - Small beginning environment to acquaint users with looking around in VR before main experience begins
 
 ### Environment Design
-Identify how environment design leveraged concepts found in the VR Book sections 21.1-21.5 in your experience
+- Care was taken to scale objects appropriately to each other
+- Ambient sound effects are present and make sense to the situation
+- Audio is spatialized
+- Clouds are used as wayfinding aids
+    - When looking up can help the user judge how far they have fallen
+    - Helps orient the user when camera position changes
+- Great Blue Hole is a landmark to help orient the user
+- The parachute and the airplane have colors that contrast sharply with the background in order to stand out
 
 ## Education Results
 ## The Experience
