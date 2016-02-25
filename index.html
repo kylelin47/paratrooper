@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Parachuter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Parachuter</h1>
+      <h2 class="project-tagline">Virtual Reality learning experience</h2>
+      <a href="https://github.com/kylelin47/paratrooper" class="btn">View on GitHub</a>
+      <a href="https://github.com/kylelin47/paratrooper/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/kylelin47/paratrooper/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="parachuting" class="anchor" href="#parachuting" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Parachuting</h1>
+
+<h2>
+<a id="motivation-and-explanation" class="anchor" href="#motivation-and-explanation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Motivation and Explanation</h2>
+
+<p>Our goal was to center our learning around a memorable experience. We wanted the experience to have unique sound
+and a dynamic environment, so that it would be easily recognizable. We felt that sky diving satisfied these requirements. The visual
+of falling through the clouds, and seeing the ground from so high that its features appear flat should evoke strong reaction and
+imagination from the user. The sound of the wind rushing by quickly in free-fall contrasted with the relative calm of the parachute
+flapping in the breeze should do the same. We decided we would teach about the basic knowledge required in order to safely sky dive.</p>
+
+<p>We then decided to choose the location of the sky dive to be the <a href="https://en.wikipedia.org/wiki/Great_Blue_Hole">Great Blue Hole</a>.
+From the start, we knew the location of the sky dive had to be a recognizable location, because sky diving into a generic environment
+isn't as interesting. We decided on the Great Blue Hole in particular because of its size and how it's recognizable even from high
+in the air.</p>
+
+<p>At the end of the experience, we wanted our user to have a greater understanding of the steps taken in sky diving, along with some insight
+into the mechanics of skydiving (for example, time spent in free fall, height to dive from, how sound changes when parachute deploys).</p>
+
+<p>The user begins inside a small plane circling the Great Blue Hole.
+A voice in the user's ear gives some introductory information, with sound effects meant to emulate the effect of a radio transmission, then
+the door to the plane opens and the user jumps out of the plane. On the way down, the user is given instructions on how to safely complete
+the sky dive.</p>
+
+<h3>
+<a id="learning-objective" class="anchor" href="#learning-objective" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Learning Objective</h3>
+
+<p>After the VR experience, users will be able to demonstrate understanding of the key steps needed in order to sky dive.</p>
+
+<h3>
+<a id="increasing-sense-of-presence" class="anchor" href="#increasing-sense-of-presence" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Increasing Sense of Presence</h3>
+
+<ul>
+<li>Audio
+
+<ul>
+<li>All spatialized to seem to occur from proper location</li>
+<li>Wind sounds that increase depending on velocity</li>
+<li>Sounds of parachute opening, flapping in the wind, plane leaving</li>
+<li>Instructions and learning information integrated into the world as a voice in an earpiece</li>
+</ul>
+</li>
+<li>Visual
+
+<ul>
+<li>Avatar present</li>
+<li>Volumetric clouds present at correct altitudes</li>
+<li>Camera turns to match head position that a sky diver would have</li>
+<li>Body rotates to positions that a sky diver would have</li>
+<li>Graphics cover the entire range of experience</li>
+</ul>
+</li>
+<li>Misc
+
+<ul>
+<li>Speeds and timings roughly scaled to reality</li>
+<li>Single, easy to understand and follow story line with a strong central theme</li>
+<li>Small beginning environment to acquaint users with looking around in VR before main experience begins</li>
+</ul>
+</li>
+</ul>
+
+<h3>
+<a id="environment-design" class="anchor" href="#environment-design" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Environment Design</h3>
+
+<ul>
+<li>Care was taken to scale objects appropriately to each other</li>
+<li>Ambient sound effects are present and make sense to the situation</li>
+<li>Audio is spatialized</li>
+<li>Clouds are used as wayfinding aids
+
+<ul>
+<li>When looking up can help the user judge how far they have fallen</li>
+<li>Helps orient the user when camera position changes</li>
+</ul>
+</li>
+<li>Great Blue Hole is a landmark to help orient the user</li>
+<li>The parachute and the airplane have colors that contrast sharply with the background in order to stand out</li>
+</ul>
+
+<h2>
+<a id="education-results" class="anchor" href="#education-results" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Education Results</h2>
+
+<h2>
+<a id="the-experience" class="anchor" href="#the-experience" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The Experience</h2>
+
+<p>Youtube Video:</p>
+
+<p>Source code and executable:</p>
+
+<h2>
+<a id="technical-explanation" class="anchor" href="#technical-explanation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Technical Explanation</h2>
+
+<ul>
+<li>Gravity was simulated using a RigidBody on the player</li>
+<li>Movement occurred by applying forces to the RigidBody</li>
+<li>The effect of a parachute was simulated by applying drag to the RigidBody</li>
+<li>Clouds are generated programatically</li>
+<li>Stereo overlays created by having a Canvas in the world space follow the camera</li>
+<li>Camera attached to the head of the avatar</li>
+<li>Avatar rotates to follow the camera</li>
+<li>Transitions (standing --&gt; spread eagle --&gt; parachuting) made using Unity Animator</li>
+</ul>
+
+<h2>
+<a id="non-student-created-assets" class="anchor" href="#non-student-created-assets" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Non-Student Created Assets</h2>
+
+<h3>
+<a id="audio" class="anchor" href="#audio" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Audio</h3>
+
+<table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Author</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Radio Static</td>
+<td>None Listed</td>
+<td><a href="http://soundbible.com/149-Radio-Static.html">http://soundbible.com/149-Radio-Static.html</a></td>
+</tr>
+<tr>
+<td>Sky Diving</td>
+<td>Huggy|3ear</td>
+<td><a href="https://www.freesound.org/people/Huggy13ear/packs/8657/">https://www.freesound.org/people/Huggy13ear/packs/8657/</a></td>
+</tr>
+</tbody>
+</table>
+
+<h3>
+<a id="models" class="anchor" href="#models" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Models</h3>
+
+<table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Author</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CloudsToy</td>
+<td>joycf</td>
+<td><a href="http://www.jocyf.com/utilsEnglih.html">http://www.jocyf.com/utilsEnglih.html</a></td>
+</tr>
+<tr>
+<td>Parachutes</td>
+<td>3D Everything</td>
+<td><a href="https://www.assetstore.unity3d.com/en/#!/content/40565">https://www.assetstore.unity3d.com/en/#!/content/40565</a></td>
+</tr>
+<tr>
+<td>Underwater world and effects</td>
+<td>Konstantin Dvornik</td>
+<td><a href="http://kostiantyn-dvornik.blogspot.com/2013/05/unity-worlds-coolest-tutorial-about.html">http://kostiantyn-dvornik.blogspot.com/2013/05/unity-worlds-coolest-tutorial-about.html</a></td>
+</tr>
+<tr>
+<td>Fishing Boat</td>
+<td>Ozgur Saral</td>
+<td><a href="https://www.assetstore.unity3d.com/en/#!/content/23181">https://www.assetstore.unity3d.com/en/#!/content/23181</a></td>
+</tr>
+<tr>
+<td>Cessna 172 Plane</td>
+<td>3dregenerator</td>
+<td><a href="http://tf3dm.com/3d-models/maya">http://tf3dm.com/3d-models/maya</a></td>
+</tr>
+<tr>
+<td>Pilot</td>
+<td>AutoDesk Character Generator</td>
+<td><a href="https://charactergenerator.autodesk.com/account/MyAvatars.aspx">https://charactergenerator.autodesk.com/account/MyAvatars.aspx</a></td>
+</tr>
+<tr>
+<td>Thumbs Up</td>
+<td>Mixamo</td>
+<td><a href="https://www.mixamo.com/">https://www.mixamo.com/</a></td>
+</tr>
+</tbody>
+</table>
+
+<h2>
+<a id="team-members" class="anchor" href="#team-members" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Team Members</h2>
+
+<ul>
+<li>Kyle Lin</li>
+<li>Virada Long</li>
+<li>Tonny Xie</li>
+</ul>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/kylelin47/paratrooper">Paratrooper</a> is maintained by <a href="https://github.com/kylelin47">kylelin47</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
