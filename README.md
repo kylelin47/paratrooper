@@ -51,6 +51,9 @@ After the VR experience, users will be able to demonstrate understanding of the 
 
 ## Education Results
 ## The Experience
+Youtube Video:
+
+Source code and executable:
 ## Technical Explanation
 - Gravity was simulated using a RigidBody on the player
 - Movement occurred by applying forces to the RigidBody
